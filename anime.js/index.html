@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ball {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      top: 20px;
+      bottom: 0;
+      filter: blur(2px);
+      left: calc(50% - 100px);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      background-color: red;
+      border-radius: 50%;
+      background: #30E8BF;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FF8235, #30E8BF);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .line {
+      background-color: #fff;
+      width: 10px;
+      top: 220px;
+      bottom: 0;
+      position: absolute;
+      border-radius: 50%;
+      left: 50%;
+      background-color: black;
+    }
+
+    .line1 {
+      height: 130px;
+      border-left: 1px solid #fff;
+    }
+
+    .line2 {
+      height: 200px;
+      border-right: 1px solid #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div class="ball"></div>
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    var bouncingBall = anime({
+      targets: '.content',
+      translateY: '10vh',
+      duration: 700,
+      loop: true,
+      direction: 'alternate',
+      easing: 'easeInOutQuad',
+      scaleX: {
+        duration: 150,
+        delay: 268
+      }
+    });
+  </script>
+</body>
+
+</html>

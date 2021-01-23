@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      margin: 0;
+    }
+
+    .box {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box input {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+      color: rgb(255, 143, 66);
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid rgb(255, 143, 66);
+    }
+
+    .box input:active,
+    .box input:focus {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div class="box">
+      <input type="text" name="" id="" value="0">
+    </div>
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    anime({
+      targets: '.box input',
+      value: [0, 1000],
+      round: 1,
+      easing: 'easeInOutExpo',
+    });
+  </script>
+</body>
+
+</html>
