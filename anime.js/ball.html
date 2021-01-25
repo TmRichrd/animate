@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    .ball {
+      background-color: #fff;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: calc(50% - 50px);
+      top: calc(50% - 50px);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div class="ball">
+
+    </div>
+  </div>
+  <script src="anime.js"></script>
+  <script>
+    window.addEventListener('click', (event) =>
+    {
+      var e = event || window.event;
+      console.log(e.clientX,e.clientY);
+    })
+    const ballEl = document.querySelector('.ball')
+    const animteEl = anime({
+      targets: ballEl,
+      duration: 700,
+      direction: 'alternate',
+      easing: 'easeInOutSine',
+      keyframes:[{translateY:-250},{translateY:0},{translateX:250}]
+    })
+  </script>
+</body>
+
+</html>
